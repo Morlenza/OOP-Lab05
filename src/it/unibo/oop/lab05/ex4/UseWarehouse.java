@@ -1,7 +1,9 @@
 package it.unibo.oop.lab05.ex4;
 
 import it.unibo.oop.lab05.ex3.Product;
+import it.unibo.oop.lab05.ex3.ProductImpl;
 import it.unibo.oop.lab05.ex3.Warehouse;
+import it.unibo.oop.lab05.ex3.WarehouseImpl;
 
 /**
  *
@@ -28,15 +30,24 @@ public final class UseWarehouse {
          * 
          * 2) The implementation of Product must implement Comparable<Product>.
          */
-        final Product p1 = null;
-        final Product p2 = null;
-        final Product p3 = null;
-        final Warehouse w = null;
-        w.addProduct(p3);
-        w.addProduct(p1);
-        w.addProduct(p2);
-        System.out.println(w.allNames());
-        System.out.println(w.allProducts());
+    	 final Product p1 = new ComparableProduct("Patate", 100);
+         final Product p2 = new ComparableProduct("Carote", 550);
+         final Product p3 = new ComparableProduct("Piselli", 273);
+
+         final Warehouse w = new OrderedWarehouse();
+         w.addProduct(p3);
+         w.addProduct(p1);
+         w.addProduct(p2);
+
+         System.out.println(w.allNames());
+         System.out.println(w.allProducts());
+         
+         final Product p4 = new ComparableProduct("Carote", 500);
+
+         w.addProduct(p4);
+         System.out.println(w.allProducts());
+         System.out.println(w.getQuantity("Carote"));
+         System.out.println(w.containsProduct(p1));
     }
 
 }

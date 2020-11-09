@@ -5,7 +5,7 @@ public class ProductImpl implements Product {
 	private final String name;
 	private final double quantity;
 	
-	ProductImpl(final String name, final double q) {
+	public ProductImpl(final String name, final double q) {
 		this.name = name;
 		this.quantity = q;
 	}
