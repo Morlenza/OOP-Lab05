@@ -41,5 +41,4 @@ public class WarehouseImpl implements Warehouse {
 		}
 		return 0;
 	}
-
 }
