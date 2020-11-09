@@ -1,5 +1,7 @@
 package it.unibo.oop.lab05.ex2;
 
+import java.util.TreeSet;
+
 /**
  * 
  */
@@ -24,5 +26,11 @@ public final class UseSetWithOrder {
          * 
          * 3) Prints the set, which must be ordered
          */
+    	
+    	TreeSet<String> set = new TreeSet<>(new MyComparatorStrings());
+    	for(int i = 0 ; i < 100 ; i++) {
+    		set.add(Double.toString(Math.random() * 100));    	
+    	}
+    	System.out.println(set);
     }
 }
