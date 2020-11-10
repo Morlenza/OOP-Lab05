@@ -22,9 +22,7 @@ public final class Utilities {
      *            Collection type
      */
     public static <X> void copyAll(final Collection<X> source, final Collection<? super X> target) {
-    	for(final X curr : source) {
-    		target.add(curr);
-    	}
+    	target.addAll(source);
     }
 
     /**
