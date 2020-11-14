@@ -1,9 +1,7 @@
 package it.unibo.oop.lab05.ex4;
 
 import it.unibo.oop.lab05.ex3.Product;
-import it.unibo.oop.lab05.ex3.ProductImpl;
 import it.unibo.oop.lab05.ex3.Warehouse;
-import it.unibo.oop.lab05.ex3.WarehouseImpl;
 
 /**
  *

@@ -35,7 +35,7 @@ public final class Utilities {
      */
     public static <X> X getRandomElement(final Collection<X> coll) {
         int num = new Random().nextInt(coll.size());
-        for (X x : coll) {
+        for (final X x : coll) {
         	if(num == 0) {
         		return x;
         	}

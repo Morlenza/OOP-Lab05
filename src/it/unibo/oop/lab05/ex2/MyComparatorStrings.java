@@ -2,10 +2,10 @@ package it.unibo.oop.lab05.ex2;
 
 import java.util.Comparator;
 
-public class MyComparatorStrings implements Comparator<String>{
+public class MyComparatorStrings implements Comparator<String> {
 
 	@Override
 	public int compare(String o1, String o2) {
 		return Double.compare(Double.parseDouble(o1), Double.parseDouble(o2));
-	} 
+	}
 }

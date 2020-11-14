@@ -3,13 +3,12 @@ package it.unibo.oop.lab05.ex3;
 import java.util.HashSet;
 import java.util.Set;
 
-
 public class WarehouseImpl implements Warehouse {
-	
-	private final Set<Product> warehouse= new HashSet<>();
-	
+
+	private final Set<Product> warehouse = new HashSet<>();
+
 	@Override
-	public void addProduct(Product p) {
+	public final void addProduct(final Product p) {
 		this.warehouse.add(p);
 	}
 
@@ -28,14 +27,14 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	@Override
-	public boolean containsProduct(Product p) {
+	public final boolean containsProduct(final Product p) {
 		return this.warehouse.contains(p);
 	}
 
 	@Override
-	public double getQuantity(final String name) {
+	public final double getQuantity(final String name) {
 		for (final Product curr : this.warehouse) {
-			if(curr.getName().equals(name)) {
+			if (curr.getName().equals(name)) {
 				return curr.getQuantity();
 			}
 		}
